@@ -1,11 +1,13 @@
 'use client';
 import Image from "next/image"
 import Link from "next/link"
+import { usePathname } from "next/navigation";
 const Header = () => {
+    const pathname = usePathname()
     return (
         <>
          {
-            window.location.pathname === '/' ?
+            pathname === '/' || pathname == '/signup' ?
             <div className="hidden shadow-sm w-full py-2 mb-4">
             <div className="flex items-center justify-between mx-40">
                 <div className="flex items-center gap-2">
